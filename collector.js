@@ -7,16 +7,16 @@ export class Collector {
         this.blueCollectionFactor = 1;
         this.greenCollectionFactor = 1;
         this.purpleCollectionFactor = 1;
-        this.maximums = [10,5,0,0,0]; // [maxWhite, maxBlue, maxGreen, maxPurple]
+        this.maximums = {white:10, blue:5, green:0, purple:0}; // [maxWhite, maxBlue, maxGreen, maxPurple]
         this.maxWhiteUpgradeCost = 10;
-        this.pasta = []
+        this.pasta = {white:0, blue:0, green:0, purple:0}
         // ...otros atributos...
     }
 
     upgradeMaxWhite() {
         //this.level++;
         this.collectionSpeed += 0.2;
-        this.maximums[0] = Math.floor(this.maximums[0]*1.5)
+        this.maximums.white = Math.floor(this.maximums.white*1.5)
         this.maxWhiteUpgradeCost = Math.floor(this.maxWhiteUpgradeCost * 1.5);
         this.updateUpgradeButtons();
     }
@@ -30,7 +30,7 @@ export class Collector {
     if (maxBtn) {
         maxBtn.addEventListener('click', () => {
             console.log(this.pasta)
-            if (this.pasta[0] >= this.maxWhiteUpgradeCost ){
+            if (this.pasta.white >= this.maxWhiteUpgradeCost ){
                 this.upgradeMaxWhite();
             }
         });
