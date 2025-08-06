@@ -9,13 +9,14 @@ export class Collector {
         this.purpleCollectionFactor = 1;
         this.maximums = [10,5,0,0,0]; // [maxWhite, maxBlue, maxGreen, maxPurple]
         this.maxWhiteUpgradeCost = 10;
+        this.pasta = []
         // ...otros atributos...
     }
 
     upgradeMaxWhite() {
         //this.level++;
         this.collectionSpeed += 0.2;
-        this.maximums[1] = Math.floor(this.maximums[1]*1.2)
+        this.maximums[0] = Math.floor(this.maximums[0]*1.2)
         this.maxWhiteUpgradeCost = Math.floor(this.maxWhiteUpgradeCost * 1.5);
         this.updateUpgradeButtons();
     }
@@ -28,15 +29,17 @@ export class Collector {
     const maxBtn = document.getElementById('upgradeCollectorMaxWhiteBtn');
     if (maxBtn) {
         maxBtn.addEventListener('click', () => {
-            if (this.maxWhiteUpgradeCost)
-            this.upgradeMaxWhite();
+            console.log(this.pasta)
+            if (this.pasta[0] >= this.maxWhiteUpgradeCost ){
+                this.upgradeMaxWhite();
+            }
         });
     }
 
     const speedBtn = document.getElementById('upgradeCollectorSpeedWhiteBtn');
     if (speedBtn) {
         speedBtn.addEventListener('click', () => {
-            this.upgradeWhiteSpeed();
+            // this.upgradeWhiteSpeed();
         });
     }
 }

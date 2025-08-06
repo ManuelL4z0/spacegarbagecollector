@@ -31,10 +31,10 @@ export let greenGarbageCount = 0;
 export let purpleGarbageCount = 0;
 
 export function garbageCollectionLogic(maximums) {
-    let maxWhite = maximums[1];
-    let maxBlue  = maximums[2];
-    let maxGreen = maximums[3];
-    let maxPurple = maximums[4];
+    let maxWhite = maximums[0];
+    let maxBlue  = maximums[1];
+    let maxGreen = maximums[2];
+    let maxPurple = maximums[3];
     // Lógica para actualizar los contadores de basura
     whiteGarbageCount += Math.floor(Math.random() * Math.floor(Math.random() * maxWhite));
     blueGarbageCount  += Math.floor(Math.random() * Math.floor(Math.random() * maxBlue));

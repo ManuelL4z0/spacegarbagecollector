@@ -45,6 +45,7 @@ function main() {
         if (now - lastGarbageUpdate > 1000) {
             garbageCollectionLogic(collector.maximums);
             lastGarbageUpdate = now;
+            collector.pasta = [whiteGarbageCount, blueGarbageCount, greenGarbageCount, purpleGarbageCount]
             updateCounters(whiteGarbageCount, blueGarbageCount, greenGarbageCount, purpleGarbageCount);
         }
 
