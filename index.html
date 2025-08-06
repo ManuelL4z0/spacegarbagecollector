@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Garbage Collector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="grid-container">
+        <div id="collector" class="column">
+            <h2>Colector</h2>
+            <button id="upgradeCollectorMaxWhiteBtn">Mejora Max Blanca</button>
+            <button id="upgradeCollectorSpeedWhiteBtn">Mejora Velocidad Blanca</button>
+            <!-- Aquí se mostrará el recuento de basura -->
+            <div id="garbageCount" class="counters">
+                <p><span id="whiteGarbageCount">Blanca: 0</span></p>
+                <p><span id="blueGarbageCount">Azul: 0</span></p>
+                <p><span id="greenGarbageCount">Verde: 0</span></p>
+                <p><span id="purpleGarbageCount">Lila: 0</span></p>
+            </div>
+        </div>
+        <div id="processor" class="column">
+            <h2>Procesador</h2>
+            <button id="upgradeProcessorBtn">Mejorar Procesador</button>
+            <!-- Aquí se mostrarán las materias extraídas -->
+            <div id="materialsExtracted" class="counters">
+                <p><span id="metalCount">Metal: 0</span></p>
+                <p><span id="organicCount">Organico: 0</span></p>
+                <p><span id="plasticCount">Plástico: 0</span></p>
+            </div>
+        </div>
+        <div id="fabrication" class="column">
+            <h2>Fabricación</h2>
+            <button id="upgradeToolBtn">Mejorar Herramienta</button>
+            <!-- Aquí se mostrarán las herramientas fabricadas -->
+            <div id="toolsManufactured" class="counters">
+                <p><span>Estructura Externa</span></p>
+                <p><span>Estructura Interna</span></p>
+                <p><span>Placas de Circuito</span></p>
+                <p><span>Panel Solar</span></p>
+                <p><span>Reactor</span></p>
+                <!-- Añadir más herramientas según sea necesario -->
+            </div>
+        </div>
+        <div id="canvas-container" class="column">
+            <h2>Visor Orbital</h2>
+            <!-- El visor 3D se renderizará aquí -->
+            <canvas id="gameCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="planet.js"></script>
+    <script src="spaceship.js"></script>
+    <script src="scene.js"></script>
+    <script src="control.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

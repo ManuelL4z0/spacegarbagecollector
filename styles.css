@@ -1,0 +1,63 @@
+/* styles.css */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+body {
+    margin: 10;
+    padding: 10;
+    background-image: url('background.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Orbitron', sans-serif; /* Ajusta la tipografía según tus necesidades */
+}
+
+h2{
+    margin-top: 10;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20pt;
+    color: #fff;
+}
+
+#canvas-container {
+    display: flex; /* Usamos flexbox para que el contenedor se ajuste al tamaño del canvas */
+    align-items: stretch; /* Hace que el contenedor se estire para adaptarse al tamaño del canvas */
+    position: relative;
+    flex-direction: column;
+    border: 5px solid rgb(189, 174, 174); /* Línea negra gruesa alrededor del visor orbital */
+    border-radius: 10px; /* Opcional: para redondear las esquinas */
+}
+
+#gameCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    position: relative;
+}
+
+.counters {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+.counters p {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    margin-right: 10px; /* Ajusta el espacio entre los contadores */
+}
+
+.counters span {
+    font-size: 12px; /* Ajusta el tamaño de fuente de los contadores */
+    font-weight: bold;
+}

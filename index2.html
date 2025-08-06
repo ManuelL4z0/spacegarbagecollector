@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Garbage Collector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="info">
+            <h1>Space Garbage Collector</h1>
+            <!-- Información del estado del juego, recursos, mejoras, etc. -->
+        </div>
+        <div id="canvas-container">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="controls">
+            <button id="upgradeCollectorBtn">Mejorar Colector</button>
+            <button id="upgradeProcessorBtn">Mejorar Procesador</button>
+            <button id="upgradeToolBtn">Mejorar Herramienta</button>
+            <!-- Otros controles y botones -->
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="planet.js"></script>
+    <script src="spaceship.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
