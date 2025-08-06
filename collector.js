@@ -16,7 +16,7 @@ export class Collector {
     upgradeMaxWhite() {
         //this.level++;
         this.collectionSpeed += 0.2;
-        this.maximums[0] = Math.floor(this.maximums[0]*1.2)
+        this.maximums[0] = Math.floor(this.maximums[0]*1.5)
         this.maxWhiteUpgradeCost = Math.floor(this.maxWhiteUpgradeCost * 1.5);
         this.updateUpgradeButtons();
     }
