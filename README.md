@@ -1,11 +1,19 @@
 # spacegarbagecollector
 
 ## Ideas para el gameplay
-   - Una primera vista "orbital" centrada en un planeta que permita estas acciones:
+   - La primera (1) vista, "orbital" centrada en un planeta que permita estas acciones:
       - Mejorar las partes de la nave (de momento: colector, procesador y fabricación)
       - Modificar la posición orbital de la nave respecto al planeta
-      - Escanear nuevas posibles fuentes o "nubes" de basura orbital   
+      - Escanear nuevas posibles fuentes o "nubes" de basura orbital
+      - Pasar a la vista 2 para ver el sistema al que el planeta pertenece.
+   - La segunda (2) vista de todo el sistema solar:
+      - Elegir un planeta para pasar a la vista 1
+      - Gestión/Mejoras/Investigación
+      - Obtener métricas de la flota.  
 
+### Mejoras
+#### Nave
+- Drones
 
 ## Ideas para HUD y vista final
 
