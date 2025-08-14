@@ -1,6 +1,10 @@
 //ui.js
 // Función para actualizar los contadores en el DOM
-export function updateCounters(white,blue,green,purple) {
+export function updateCounters(garbageCounts) {
+    let white = garbageCounts.white;
+    let blue = garbageCounts.blue;
+    let green = garbageCounts.green;
+    let purple = garbageCounts.purple;
     white = white.toString()
     //white = white1[1];
     blue = blue.toString()

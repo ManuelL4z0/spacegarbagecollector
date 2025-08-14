@@ -8,7 +8,7 @@ export class Collector {
         this.greenCollectionFactor = 1;
         this.purpleCollectionFactor = 1;
         this.maximums = {white:10, blue:5, green:0, purple:0}; // [maxWhite, maxBlue, maxGreen, maxPurple]
-        this.maxWhiteUpgradeCost = 10;
+        this.maxWhiteUpgradeCost = 9;
         this.pasta = {white:0, blue:0, green:0, purple:0}
         // ...otros atributos...
     }
@@ -31,6 +31,8 @@ export class Collector {
         maxBtn.addEventListener('click', () => {
             console.log(this.pasta)
             if (this.pasta.white >= this.maxWhiteUpgradeCost ){
+                this.pasta.white -= this.maxWhiteUpgradeCost; // Descuenta el costo
+                console.log(this.pasta)
                 this.upgradeMaxWhite();
             }
         });

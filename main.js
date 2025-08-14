@@ -1,6 +1,6 @@
 // main.js
 
-import { garbageCollectionLogic, whiteGarbageCount, blueGarbageCount, greenGarbageCount, purpleGarbageCount } from './collectionLogic.js';
+import { garbageCollectionLogic} from './collectionLogic.js';
 import { updateCounters } from './ui.js';
 import { Collector } from './collector.js';
 function main() {
@@ -43,10 +43,11 @@ function main() {
         // Actualiza la lógica de basura cada 1000 ms (1 segundo)
         const now = Date.now();
         if (now - lastGarbageUpdate > 1000) {
-            garbageCollectionLogic(collector.maximums);
+            collector.pasta = garbageCollectionLogic(collector.maximums, collector.pasta);
             lastGarbageUpdate = now;
-            collector.pasta = [whiteGarbageCount, blueGarbageCount, greenGarbageCount, purpleGarbageCount]
-            updateCounters(whiteGarbageCount, blueGarbageCount, greenGarbageCount, purpleGarbageCount);
+            //collector.pasta = {white:whiteGarbageCount, blue:blueGarbageCount, green:greenGarbageCount, purple:purpleGarbageCount}
+            //collector.pasta = [whiteGarbageCount, blueGarbageCount, greenGarbageCount, purpleGarbageCount]
+            updateCounters(collector.pasta);
         }
 
         // Actualiza la animación cada frame

@@ -24,13 +24,17 @@ function collectGarbage(shipCharacteristics, currentGarbageCloud, planet) {
 
 
 
+//export let garbageCounts = {white:0, blue:0, green:0, purple:0}
+//export let whiteGarbageCount = 0;
+//export let blueGarbageCount = 0;
+//export let greenGarbageCount = 0;
+//export let purpleGarbageCount = 0;
 
-export let whiteGarbageCount = 0;
-export let blueGarbageCount = 0;
-export let greenGarbageCount = 0;
-export let purpleGarbageCount = 0;
-
-export function garbageCollectionLogic(maximums) {
+export function garbageCollectionLogic(maximums,garbageCounts) {
+    whiteGarbageCount = garbageCounts.white;
+    blueGarbageCount  = garbageCounts.blue;
+    greenGarbageCount = garbageCounts.green;
+    purpleGarbageCount = garbageCounts.purple;
     let maxWhite = maximums.white;
     let maxBlue  = maximums.blue;
     let maxGreen = maximums.green;
@@ -45,4 +49,11 @@ export function garbageCollectionLogic(maximums) {
     blueGarbageCount  = Math.min(blueGarbageCount, maxBlue);
     greenGarbageCount = Math.min(greenGarbageCount, maxGreen);
     purpleGarbageCount = Math.min(purpleGarbageCount, maxPurple);
+
+    garbageCounts.white = whiteGarbageCount;
+    garbageCounts.blue = blueGarbageCount;
+    garbageCounts.green = greenGarbageCount;
+    garbageCounts.purple = purpleGarbageCount;
+
+    return garbageCounts;
 }
