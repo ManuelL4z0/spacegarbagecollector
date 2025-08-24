@@ -1,5 +1,10 @@
 # spacegarbagecollector
 
+## Referencias
+   - Advent Idle
+   - IdleLoop
+   - dodecadragons
+
 ## Ideas para el gameplay
    - La primera (1) vista, "orbital" centrada en un planeta que permita estas acciones:
       - Mejorar las partes de la nave (de momento: colector, procesador y fabricación)
