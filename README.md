@@ -1,9 +1,9 @@
 # spacegarbagecollector
 
 ## Referencias
-   - Advent Idle
-   - IdleLoop
-   - dodecadragons
+   - [Advent Incremental/Idle](https://paperpilot.dev/advent/)
+   - [IdleLoop](https://lloyd-delacroix.github.io/omsi-loops/) Esto es tmb un juego en github.
+   - [dodecadragons](https://demonin.com/games/dodecaDragons/)
 
 ## Ideas para el gameplay
    - La primera (1) vista, "orbital" centrada en un planeta que permita estas acciones:
