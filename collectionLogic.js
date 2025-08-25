@@ -30,7 +30,7 @@ function collectGarbage(shipCharacteristics, currentGarbageCloud, planet) {
 //export let greenGarbageCount = 0;
 //export let purpleGarbageCount = 0;
 
-export function garbageCollectionLogic(maximums,garbageCounts) {
+export function garbageCollectionLogic(maximums,garbageCounts, collectionSpeed) {
     whiteGarbageCount = garbageCounts.white;
     blueGarbageCount  = garbageCounts.blue;
     greenGarbageCount = garbageCounts.green;
@@ -40,10 +40,11 @@ export function garbageCollectionLogic(maximums,garbageCounts) {
     let maxGreen = maximums.green;
     let maxPurple = maximums.purple;
     // Lógica para actualizar los contadores de basura
-    whiteGarbageCount += Math.floor(Math.random() * Math.floor(Math.random() * maxWhite));
-    blueGarbageCount  += Math.floor(Math.random() * Math.floor(Math.random() * maxBlue));
-    greenGarbageCount += Math.floor(Math.random() * Math.floor(Math.random() * maxGreen));
-    purpleGarbageCount += Math.floor(Math.random() * Math.floor(Math.random() * maxPurple));
+    whiteGarbageCount += Math.floor(collectionSpeed * Math.random() * Math.floor(Math.random() * maxWhite));
+    blueGarbageCount  += Math.floor(collectionSpeed * Math.random() * Math.floor(Math.random() * maxBlue));
+    greenGarbageCount += Math.floor(collectionSpeed * Math.random() * Math.floor(Math.random() * maxGreen));
+    purpleGarbageCount += Math.floor(collectionSpeed * Math.random() * Math.floor(Math.random() * maxPurple));
+
 
     whiteGarbageCount = Math.min(whiteGarbageCount, maxWhite);
     blueGarbageCount  = Math.min(blueGarbageCount, maxBlue);
