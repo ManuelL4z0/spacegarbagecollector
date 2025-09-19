@@ -1,5 +1,9 @@
 # spacegarbagecollector
 
+## TO DO:
+### Blender - THREE conexion
+- Podemos cargar las propiedades de un objeto y sus materiales de Blender en THREE??? -> probar con el ejemplo del planeta propuesto por Ale
+
 ## Lore
 "Post sociedad avanzada que ya ha contaminado el universo 666 dcc.(despues.de.cristo.cibernetico.A.I.)"
 Jugador: recoje basura para avanzar / (sobre)vivir
