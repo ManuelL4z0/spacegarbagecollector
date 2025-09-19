@@ -4,12 +4,11 @@
 "Post sociedad avanzada que ya ha contaminado el universo 666 dcc.(despues.de.cristo.cibernetico.A.I.)"
 Jugador: recoje basura para avanzar / (sobre)vivir
 Medios:
--gran carguero /cantidad:1 (donde navega el jugador entre sistemas/mapas)
--naves orbitales recojemierda (NOR) /cantidad:x
--tecnologias 2 ramas -> carguero / NOR
-  -carguero -> sacar beneficio de la recolección ++
-  -NOR -> recolectar ++
-
+- gran carguero /cantidad:1 (donde navega el jugador entre sistemas/mapas)
+- naves orbitales recojemierda (NOR) /cantidad:x
+- tecnologias 2 ramas -> carguero / NOR
+  - carguero -> sacar beneficio de la recolección ++
+  - NOR -> recolectar ++
 ## Referencias
    - [Advent Incremental/Idle](https://paperpilot.dev/advent/)
    - [IdleLoop](https://lloyd-delacroix.github.io/omsi-loops/) Esto es tmb un juego en github.
