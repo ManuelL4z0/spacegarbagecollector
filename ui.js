@@ -87,10 +87,12 @@ export function updateCounters(garbageCounts) {
 
 
 export function updateCounters2(garbageCounts) {
-    let white = garbageCounts.white;
-    let blue = garbageCounts.blue;
-    let green = garbageCounts.green;
-    let purple = garbageCounts.purple;
+
+    let white = Number(garbageCounts.white).toFixed(0);
+    let blue = Number(garbageCounts.blue).toFixed(0);
+    let green = Number(garbageCounts.green).toFixed(0);
+    let purple = Number(garbageCounts.purple).toFixed(0);
+
     white = white.toString()
     //white = white1[1];
     blue = blue.toString()

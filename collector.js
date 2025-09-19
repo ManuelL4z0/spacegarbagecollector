@@ -11,6 +11,7 @@ export class Collector {
         this.maxWhiteUpgradeCost = 9;
         this.speedWhiteUpgradeCost = 5;
         this.pasta = {white:0, blue:0, green:0, purple:0}
+        this.collectionSpeed = {white:1,blue:1e-3,green:0,purple:0}
         // ...otros atributos...
     }
 
@@ -23,8 +24,9 @@ export class Collector {
     }
 
     upgradeSpeedWhite() {
-        this.collectionSpeed += 0.05;
-        this.speedWhiteUpgradeCost = Math.floor(this.speedWhiteUpgradeCost * 1.05);
+        this.collectionSpeed.white += 0.5;
+        this.speedWhiteUpgradeCost = Number(this.speedWhiteUpgradeCost * 1.05).toFixed(2);
+        //this.collectionSpeed.white = Math.log(this.collectionSpeed.white + 1) + 1;
         this.updateUpgradeButtons();
     }
 
@@ -62,7 +64,7 @@ export class Collector {
         }
         const speedBtn = document.getElementById('upgradeCollectorSpeedWhiteBtn');
         if (speedBtn) {
-            speedBtn.textContent = `Mejora Velocidad Blanca ${this.speedWhiteUpgradeCost}/${this.collectionSpeed.toFixed(1)}`;
+            speedBtn.textContent = `Mejora Velocidad Blanca ${this.speedWhiteUpgradeCost}/${this.collectionSpeed.white.toFixed(1)}`;
         }
     }
 
