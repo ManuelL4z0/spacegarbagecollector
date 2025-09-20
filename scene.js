@@ -1,4 +1,7 @@
 // scene.js
+
+//import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
 function createScene() {  // pasar como argumento de entrada un objeto de configuración general de la escena: planeta, nivel, propiedades, ratios de incremento de recurso ....
     const scene = new THREE.Scene();
     
@@ -28,6 +31,28 @@ function createRenderer() {
     return renderer;
 }
 
+function loadSpaceshipModel(scene) {
+    const loader = new THREE.GLTFLoader();
+    loader.load(
+        'resources/models/nor1.glb',
+        function (gltf) {
+            const spaceship = gltf.scene; 
+            spaceship.name = "spaceship";
+            spaceship.scale.set(2, 2, 2);
+            spaceship.position.set(68, 0, 0);
+            spaceship.add(new THREE.AxesHelper(10));
+            scene.add(spaceship);       
+            scene.spaceship = spaceship;
+            console.log("Spaceship cargada:", spaceship);
+        },
+        undefined,
+        function (error) {
+            console.error("Error cargando nave:", error);
+        }
+    );
+}
+
+
 function createSpaceShip(scene){
     const spaceshipGeometry = new THREE.BoxGeometry(5, 5, 10);
     const spaceshipMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
@@ -54,7 +79,7 @@ function addGarbageCloud(scene, orbitRadius, cloudSize, cloudDensity, color) {
        // console.log(color);
        // console.log("Colores de la nube de puntos");
       //  console.log(color.r,color.g,color.b);
-        colors.push(255,255, 255);
+        colors.push(255,0, 255);
     }
 
     cloudGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
