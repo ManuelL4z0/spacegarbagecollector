@@ -106,8 +106,19 @@ export function updateCounters2(garbageCounts) {
     document.getElementById('blueGarbageCount').textContent = `Azul: ${blue}`;
     document.getElementById('greenGarbageCount').textContent = `Verde: ${green}`;
     document.getElementById('purpleGarbageCount').textContent = `Lila: ${purple}`;
-    document.getElementById('metalCount').textContent = `Metal: ${metalCount}`;
-    document.getElementById('organicCount').textContent = `Orgánico: ${organicCount}`;
-    document.getElementById('plasticCount').textContent = `Plástico: ${plasticCount}`;
 }
 
+export function updateProcessorCounters(materialCounts){
+    let metal = Number(materialCounts.metal).toFixed(0);
+    let organic = Number(materialCounts.organic).toFixed(0);
+    let plastic = Number(materialCounts.plastic).toFixed(0);
+
+    metal = metal.toString()
+    organic = organic.toString()
+    plastic = plastic.toString()
+
+    document.getElementById('metalCount').textContent = `Metal: ${metal}`;
+    document.getElementById('organicCount').textContent = `Orgánico: ${organic}`;
+    document.getElementById('plasticCount').textContent = `Plástico: ${plastic}`;
+
+}

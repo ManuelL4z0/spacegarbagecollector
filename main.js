@@ -1,8 +1,10 @@
 // main.js
 
 import { garbageCollectionLogic} from './collectionLogic.js';
-import { updateCounters2 } from './ui.js';
+import { updateCounters2, updateProcessorCounters } from './ui.js';
 import { Collector } from './collector.js';
+import { processorLogic} from './processorLogic.js';
+import { Processor} from './processor.js';
 function main() {
     const scene = createScene();
     const camera = createCamera();
@@ -14,7 +16,7 @@ function main() {
 
     const collector = new Collector();
     collector.initUIListeners();
-    const procesador = "hola";
+    const processor = new Processor();
     const fabricacion = "hola";
 
 
@@ -47,10 +49,14 @@ function main() {
         const now = Date.now();
         if (now - lastGarbageUpdate > 1000) {
             collector.pasta = garbageCollectionLogic(collector.maximums, collector.pasta,collector.collectionSpeed);
+            console.log(processor.processingRatio);
+            collector.pasta,processor.materialCounts = processorLogic(collector.pasta, processor.materialCounts, processor.processingRatio,processor.processingSpeed,processor.maximums);
             lastGarbageUpdate = now;
             //collector.pasta = {white:whiteGarbageCount, blue:blueGarbageCount, green:greenGarbageCount, purple:purpleGarbageCount}
             //collector.pasta = [whiteGarbageCount, blueGarbageCount, greenGarbageCount, purpleGarbageCount]
             updateCounters2(collector.pasta);
+            console.log(processor.materialCounts);
+            updateProcessorCounters(processor.materialCounts);
         }
 
         // Actualiza la animación cada frame
