@@ -6,6 +6,7 @@ class SpaceShip {
         this.processor = new Processor();
         this.fabricationTool = new FabricationTool();
         // Otras propiedades y métodos relacionados con la nave
+        this.numEnergyCores = 1;
     }
 }
 

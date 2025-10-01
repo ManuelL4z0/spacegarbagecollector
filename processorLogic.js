@@ -5,7 +5,7 @@ export function processorLogic(garbageCounts, materialCounts, garbageProcessingR
 
     // Lógica para actualizar los contadores de basura procesada
     let whiteAmountToProcess = garbageProcessingRatios.white * processingSpeed.white;
-    let blueAmountToProcess  = Math.round(garbageProcessingRatios.blue  * processingSpeed.blue);
+    let blueAmountToProcess  = garbageProcessingRatios.blue  * processingSpeed.blue;
     console.log(whiteAmountToProcess,blueAmountToProcess);
     if (garbageCounts.white < whiteAmountToProcess){whiteAmountToProcess = garbageCounts.white}
     if (garbageCounts.blue  < blueAmountToProcess) {blueAmountToProcess  = garbageCounts.blue}

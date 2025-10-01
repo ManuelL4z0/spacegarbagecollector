@@ -55,6 +55,10 @@ export class Collector {
                 }
             });
         }
+        const energySwitch = document.getElementById('switch_energia_colector');
+        if (energySwitch) {
+            console.log(energySwitch);
+        }
     }
 
     updateUpgradeButtons() {

@@ -12,22 +12,22 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Orbitron', sans-serif; /* Ajusta la tipografía según tus necesidades */
+    font-family: 'Orbitron', sans-serif; /* Tipografia */
 }
 
 h2{
-    margin-top: 10;
+    margin-top: 40px; /* espacio superior de los titulos de cada columna */
     font-family: 'Orbitron', sans-serif;
     font-size: 20pt;
     color: #fff;
 }
 
 #canvas-container {
-    display: flex; /* Usamos flexbox para que el contenedor se ajuste al tamaño del canvas */
+    display: flex; /* flexbox para que el contenedor se ajuste al tamaño del canvas */
     align-items: stretch; /* Hace que el contenedor se estire para adaptarse al tamaño del canvas */
     position: relative;
     flex-direction: column;
-    border: 5px solid rgb(189, 174, 174); /* Línea negra gruesa alrededor del visor orbital */
+    border: 5px solid rgb(189, 174, 174); /* Línea alrededor del visor orbital */
     border-radius: 10px; /* Opcional: para redondear las esquinas */
 }
 
@@ -39,6 +39,7 @@ h2{
 
 .column {
     position: relative;
+    margin-top:10px;
 }
 
 .counters {
@@ -56,8 +57,21 @@ h2{
     display: inline;
     margin-right: 10px; /* Ajusta el espacio entre los contadores */
 }
-
+.switch {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    transform: scale(1.5); /* Ajusta el tamaño del interruptor */
+}
+label span {
+    color: #fff;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    left: 50px; /* Ajusta la posición del texto */
+}
 .counters span {
     font-size: 12px; /* Ajusta el tamaño de fuente de los contadores */
     font-weight: bold;
+
 }
